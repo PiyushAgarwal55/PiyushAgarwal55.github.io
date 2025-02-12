@@ -44,6 +44,31 @@
             padding: 30px 0;
             text-align: center;
         }
+
+        /* Spinner styles */
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #007bff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        #iframe-container {
+            display: none;
+        }
+
+        #loading {
+            text-align: center;
+            padding: 20px;
+        }
     </style>
 </head>
 
@@ -121,7 +146,16 @@
     <!-- Contact Section -->
     <section id="contact" class="py-5">
         <div class="container">
-            <iframe src="https://quicklearn-contact.onrender.com" width="100%" height="600px" style="border:none;"></iframe>
+            <!-- Loading Spinner -->
+            <div id="loading">
+                <div class="spinner"></div>
+                <p>Loading content, please wait...</p>
+            </div>
+
+            <!-- Iframe Container (hidden initially) -->
+            <div id="iframe-container">
+                <iframe id="iframe" src="https://quicklearn-contact.onrender.com" width="100%" height="600px" style="border:none;"></iframe>
+            </div>
         </div>
     </section>
 
@@ -132,6 +166,20 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Get the iframe and loading section elements
+        var iframe = document.getElementById("iframe");
+        var loadingSection = document.getElementById("loading");
+        var iframeContainer = document.getElementById("iframe-container");
+
+        // Set up an event listener to hide loading section once iframe content is loaded
+        iframe.onload = function() {
+            loadingSection.style.display = "none";  // Hide loading message
+            iframeContainer.style.display = "block";  // Show iframe
+        };
+    </script>
+
 </body>
 
 </html>
