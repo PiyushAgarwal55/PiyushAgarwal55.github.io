@@ -99,6 +99,14 @@
             margin: 0 auto;
         }
 
+        .slider{
+            height: 350px;
+        }
+
+        .testimonial{
+            height: 500px;
+        }
+
         @keyframes spin {
             0% {
                 transform: rotate(0deg);
@@ -116,6 +124,28 @@
         #loading {
             text-align: center;
             padding: 20px;
+        }
+
+        @media(max-width:768px){
+            .slider{
+                height: 350px;
+            }
+            .hero-text h1{
+                font-size: 30px;
+            }
+            .hero-text .subheading{
+                font-size: 16px;
+            }
+            .hero-text a{
+                width: 178px;
+            }
+            .col-md-4{
+                margin-bottom: 1rem;
+            }
+
+            .testimonial{
+                height: 650px;
+            }
         }
     </style>
 </head>
@@ -144,7 +174,7 @@
     <section class="hero-section">
         <div class="hero-text">
             <h1>Elevate Your Brand with Napsak</h1>
-            <p>We offer expert website development, graphic design, and social media management services.</p>
+            <p class="subheading">We offer expert website development, graphic design, and social media management services.</p>
             <a href="#services" class="btn btn-light" >Discover Our Services</a>
         </div>
         <img src="we.jpg" alt="Hero Image" class="hero-image">
@@ -206,6 +236,16 @@
         </div>
     </section>
 
+    <!-- Our Projects -->
+    <section>
+        <iframe src="clients.html" frameborder="0" width="100%" class="slider"></iframe>
+    </section>
+
+    <!-- Testimonial -->
+    <section>
+        <iframe src="testimonial.html" frameborder="0" width="100%" class="testimonial"></iframe>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="py-5">
         <div class="container">
@@ -217,7 +257,7 @@
 
             <!-- Iframe Container (hidden initially) -->
             <div id="iframe-container">
-                <iframe id="iframe" src="https://quicklearn-contact.onrender.com" width="100%" height="600px" style="border:none;"></iframe>
+                <iframe id="iframe" src="https://quicklearn-contact.onrender.com" width="100%" height="500px" style="border:none;"></iframe>
             </div>
         </div>
     </section>
