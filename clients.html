@@ -1,66 +1,155 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.9/dist/css/uikit.min.css" />
 <br>
 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
-<link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css">
     <style>
         body{
-            /* font-family: 'Quicksand, sans-serif'; */
             font-size: 1.1rem;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            overflow-x: hidden;
+            overflow-y: hidden;
         }
         h1{
             text-align: center;
             color: black!important;
             font-weight: bold;
             font-family: 'Quicksand, sans-serif';
-            text-decoration: underline;
-        }
-        .kitchen_accessories_sliding{
-            background-color: rgba(0, 0, 0, 0.6);  
-            padding:8px; 
-            border-radius:5px;
         }
 
-        .kitchen_accessories_sliding_img{
-            border-radius:10px;
+        .image-container {
+            position: relative;
+            display: inline-block;
+            width: 400px; /* Ensure consistent size for all images */
+            height: 330px; /* Same as the image size */
+            overflow-y: hidden;
         }
-        
+
+        .kitchen_accessories_sliding_img {
+            width: 400; /* Make image fill the container */
+            height: 300px; /* Make image fill the container */
+            object-fit: cover; /* Ensure the image covers the entire area without distortion */
+            transition: opacity 0.3s ease-in-out; /* Smooth transition */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            padding: 8px;
+        }
+
+        .image-container:hover .overlay {
+            opacity: 1;
+        }
+
     </style>
 
     <div class="container">
-    <h1>Our Clients</h1>
+    <h1>Domains</h1>
 
     <div class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m">
-            <div style="margin-right:10px;">
-                <a href="">
-                    <img class="kitchen_accessories_sliding_img" src="re.png" width="200" height="300" alt="cfhrsw">
-                </a>
-            </div>
-        <div style="margin-right:10px;">
+        <div class="image-container" style="margin-right:10px;">
             <a href="">
-                <img class="kitchen_accessories_sliding_img" src="re.png" width="200" height="300" alt="cfhrsw">
+                <img class="kitchen_accessories_sliding_img" src="https://inteliqoservices.com/wp-content/uploads/2024/01/interiokit-homepage.jpg" alt="cfhrsw">
+                <div class="overlay">Interior Design</div>
             </a>
         </div>
-        <div style="margin-right:10px;">
+
+        <div class="image-container" style="margin-right:10px;">
             <a href="">
-                <img class="kitchen_accessories_sliding_img" src="ngo.jpg" width="200" height="300" alt="cfhrsw">
+                <img class="kitchen_accessories_sliding_img" src="https://foundersguide.com/wp-content/uploads/2019/09/delivery.jpg" alt="cfhrsw">
+                <div class="overlay">Food Delivery</div>
             </a>
         </div>
-        <div style="margin-right:10px;">
+
+        <div class="image-container" style="margin-right:10px;">
             <a href="">
-                <img class="kitchen_accessories_sliding_img" src="ngo.jpg" width="200" height="300" alt="cfhrsw">
+                <img class="kitchen_accessories_sliding_img" src="https://kanopi.com/wp-content/uploads/2020/11/Screen-Shot-2020-11-06-at-4.57.39-PM-952x462.png" alt="cfhrsw">
+                <div class="overlay">Non Profits</div>
             </a>
         </div>
-        <div style="margin-right:10px;">
+
+        <div class="image-container" style="margin-right:10px;">
             <a href="">
-                <img class="kitchen_accessories_sliding_img" src="ngo.jpg" width="200" height="300" alt="cfhrsw">
+                <img class="kitchen_accessories_sliding_img" src="https://s.tmimgcdn.com/scr/800x500/203100/marketkit-multipurpose-ecommerce-html-website-template_203166-original.jpg" alt="cfhrsw">
+                <div class="overlay">E-Commerce</div>
             </a>
         </div>
-       
-        <!-- <div>
-            <img src="img/S.jpg" width="400" height="600" alt="">
-            <div class="uk-position-center uk-panel"><h1>10</h1></div>
-        </div> -->
+
+        <div class="image-container" style="margin-right:10px;">
+            <a href="">
+                <img class="kitchen_accessories_sliding_img" src="https://www.fhoke.com/wp-content/uploads/2023/08/Niche-Pursuits.webp" alt="cfhrsw">
+                <div class="overlay">Business</div>
+            </a>
+        </div>
+
+        <div class="image-container" style="margin-right:10px;">
+            <a href="">
+                <img class="kitchen_accessories_sliding_img" src="https://www.figma.com/community/resource/5b9dffdb-b3d0-4ff8-997a-29b7a620e773/thumbnail" alt="cfhrsw">
+                <div class="overlay">Educational</div>
+            </a>
+        </div>
+
+        <div class="image-container" style="margin-right:10px;">
+            <a href="">
+                <img class="kitchen_accessories_sliding_img" src="https://colorlib.com/wp/wp-content/uploads/sites/2/9_newspaper-website-design.jpg" alt="cfhrsw">
+                <div class="overlay">News & Blogs</div>
+            </a>
+        </div>
+
+        <div class="image-container" style="margin-right:10px;">
+            <a href="">
+                <img class="kitchen_accessories_sliding_img" src="https://repository-images.githubusercontent.com/486573989/d76fb931-0182-4511-b98c-6dc099c5dfe5" alt="cfhrsw">
+                <div class="overlay">Real Estate</div>
+            </a>
+        </div>
+
+        <div class="image-container" style="margin-right:10px;">
+            <a href="">
+                <img class="kitchen_accessories_sliding_img" src="https://templatemag.com/wp-content/uploads/hilltown-hotel-website-template.jpg" alt="cfhrsw">
+                <div class="overlay">Hotels</div>
+            </a>
+        </div>
+
+        <div class="image-container" style="margin-right:10px;">
+            <a href="">
+                <img class="kitchen_accessories_sliding_img" src="https://www.wordstream.com/wp-content/uploads/2022/12/healthcare-website-design-examples-maven.png" alt="cfhrsw">
+                <div class="overlay">Health</div>
+            </a>
+        </div>
+
+        <div class="image-container" style="margin-right:10px;">
+            <a href="">
+                <img class="kitchen_accessories_sliding_img" src="https://speckyboy.com/wp-content/uploads/2019/03/restaurant-food-drink-website-inspiration-web-design-ui-02.jpg" alt="cfhrsw">
+                <div class="overlay">Restaurant & Cafe</div>
+            </a>
+        </div>
+
+        <div class="image-container" style="margin-right:10px;">
+            <a href="">
+                <img class="kitchen_accessories_sliding_img" src="https://w3layouts.b-cdn.net//wp-content/uploads/2020/02/Frame-33-1-1.jpg" alt="cfhrsw">
+                <div class="overlay">Travel</div>
+            </a>
+        </div>
+
+        <div class="image-container" style="margin-right:10px;">
+            <a href="">
+                <img class="kitchen_accessories_sliding_img" src="https://motopress.com/wp-content/uploads/2024/05/09-gymsick_gym-website-design.jpg" alt="cfhrsw">
+                <div class="overlay">Fitness & Gym</div>
+            </a>
+        </div>
+
     </div>
 
     <a class="uk-position-center-left uk-position-small" style="background-color:black; opacity:0.6; color:white!important;" href uk-slidenav-previous uk-slider-item="previous"></a>
